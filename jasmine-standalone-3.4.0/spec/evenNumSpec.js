@@ -5,8 +5,8 @@ describe("Even and odd numbers", () => {
         var ans ;
         ans= findEven(arr);
 
-        expect(ans).toBe(2, 4, 8);
+        expect(ans).toEqual([2, 4, 8]);
     });
 });
 
-console.log(ans);
+
