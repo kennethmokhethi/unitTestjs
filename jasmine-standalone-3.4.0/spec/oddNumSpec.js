@@ -3,7 +3,7 @@ describe("Comparison number",()=>{
    var num=[2,4,5,9,34,5,20];
    var ansNum=oddNum(num);
    
-   expect(ansNum).toEqual([2,4,34,20]);
+   expect(ansNum).toEqual([5,9,5]);
 
 
  });
