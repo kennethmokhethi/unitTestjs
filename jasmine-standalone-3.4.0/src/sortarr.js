@@ -1,21 +1,40 @@
 
-function sortarr(arr){
-    var s = [];
+function sortarr(arr) {
+  var sarray = [];
+ var max=arr[0];
+  
+ //finding the maximum
+ for(let a=0;a<arr.length;a++){
+   if(max<arr[a]){
+     max=arr[a];
+   };
+ };
+
+
+
+//finding the minimum
+  for (let a = 0; a < arr.length; a++) {
+   
+    var min = arr[a];
+    var index = a;
+
+    for (let b = 0; b < arr.length; b++) {
+      if (arr[b] != null) {
+        if (min > arr[b]) {
+          min = arr[b];
+          index = b;
+        }
+      };
+    };
+    //storing the minimum into the array
+    if(arr[a]!= null){
+      sarray[a] = min;
+      arr[index] = null;
+    }else{
+      sarray[a]=max
+    };
     
-    for(let a=0;a<arr.length;a++){
-    s.length=arr.length;
-    var min=arr[a];
-    var index=a;
-    for(let b=0;b<s.length;b++){
-    if(min>arr[b]){
-    min=arr[b];
-    index=b;
-    }
-    s.push(min);
-    arr.slice(index);
-    }
-    
-    }
-    return s;
-  }
-    
+    //min=max;
+  };
+  return sarray;
+};
