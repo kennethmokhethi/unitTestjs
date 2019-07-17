@@ -16,20 +16,20 @@ function sortarr(arr) {
   for (let a = 0; a < arr.length; a++) {
    
     var min = arr[a];
-    var index = a;
+    var minindex = a;
 
     for (let b = 0; b < arr.length; b++) {
       if (arr[b] != null) {
         if (min > arr[b]) {
           min = arr[b];
-          index = b;
-        }
+          minindex = b;
+        };
       };
     };
     //storing the minimum into the array
     if(arr[a]!= null){
       sarray[a] = min;
-      arr[index] = null;
+      arr[minindex] = null;
     }else{
       sarray[a]=max
     };
